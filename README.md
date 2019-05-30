@@ -4,7 +4,7 @@
 
 ## Official [guide](https://docs.nestjs.com/controllers)
 
-## Running the app
+### Running the app:
 
 ```bash
 # development
