@@ -1,7 +1,7 @@
 
 import { Controller, Get, Post, Body, Query, Param, Put, Delete } from '@nestjs/common';
 import { Observable, of } from 'rxjs';
-import { CreateCatDto } from './create-cat.dto';
+import { CreateCatDto, UpdateCatDto } from './dto';
 
 @Controller('cats')
 export class CatsController {
@@ -16,8 +16,8 @@ export class CatsController {
   // }
 
   @Get()
-  findAll(@Query() query: ListAllEntities): Observable<any[]> {
-    return of([`An array with all cats (limit: ${query.limit} items`]);
+  findAll(): Observable<any[]> {
+    return of(['An array with all cats']);
   }
 
   @Get(':id')
@@ -32,7 +32,7 @@ export class CatsController {
   }
 
   @Delete(':id')
-  delete(@Param() id: string) {
+  delete(@Param('id') id: string) {
     return `This action removes #${id} cat`;
   }
 }
