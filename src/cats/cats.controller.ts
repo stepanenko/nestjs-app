@@ -1,5 +1,5 @@
 
-import { Controller, Get, Req, Post } from '@nestjs/common';
+import { Controller, Get, Post, Param } from '@nestjs/common';
 
 @Controller('cats')
 export class CatsController {
@@ -9,7 +9,13 @@ export class CatsController {
   }
 
   @Get()
-  findAll(): string {
-    return 'This action returns all cats';
+  async findAll(): Promise<any[]> {
+    return ['An array with all cats'];
+  }
+
+  @Get(':id')
+  findOne(@Param() params): string {
+    console.log(params.id);
+    return `This action return a #${params.id} cat`;
   }
 }
