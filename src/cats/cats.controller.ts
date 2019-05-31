@@ -20,7 +20,6 @@ export class CatsController {
     return of([`An array with all cats (limit: ${query.limit} items`]);
   }
 
-  
   @Get(':id')
   findOne(@Param('id') id: string) {
     console.log(id);
