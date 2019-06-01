@@ -24,7 +24,7 @@ export class ItemsService {
   }
 
   async update(id: string): Promise<Item> {
-    const item 
+
   }
 
   async delete(id: string): Promise<Item> {
