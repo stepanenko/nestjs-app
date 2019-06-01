@@ -30,8 +30,8 @@ export class ItemsController {
   }
 
   @Put(':id')
-  update(@Body() updateItemDto: CreateItemDto, @Param('id') id: any): string {
-    return `Item ${id} updated to ${updateItemDto.name}`;
+  update(@Body() updateItemDto: CreateItemDto, @Param('id') id: any): Promise<Item> {
+    return this.itemsService.update(id, updateItemDto);
   }
 
   @Delete(':id')
