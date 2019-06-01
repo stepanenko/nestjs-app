@@ -14,18 +14,19 @@ export class ItemsController {
   //   console.log(req.url);
   //   return res.send('All items');
   // }
-  findAll(): Item[] {
+  findAll(): Promise<Item[]> {
     return this.itemsService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id): Item {
+  findOne(@Param('id') id): Promise<Item> {
     return this.itemsService.findOne(id);
   }
 
   @Post()
-  create(@Body() createItemDto: CreateItemDto): string {
-    return `Name: ${createItemDto.name}; Desc: ${createItemDto.description}`;
+  create(@Body() item: Item): Promise<Item> {
+    return this.itemsService.create(item);
+    // return `Name: ${createItemDto.name}; Desc: ${createItemDto.description}`;
   }
 
   @Put(':id')
@@ -34,7 +35,7 @@ export class ItemsController {
   }
 
   @Delete(':id')
-  delete(@Param('id') id): string {
-    return `Item ${id} was removed`;
+  delete(@Param('id') id): Promise<Item> {
+    return this.itemsService.delete(id);
   }
 }
