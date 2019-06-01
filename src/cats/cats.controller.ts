@@ -2,23 +2,26 @@
 import { Controller, Get, Post, Body, Query, Param, Put, Delete } from '@nestjs/common';
 import { Observable, of } from 'rxjs';
 import { CreateCatDto, UpdateCatDto } from './dto';
+import { CatsService } from './cats.service';
 
 @Controller('cats')
 export class CatsController {
+  constructor(private readonly catsService: CatsService) {}
+
   @Post()
   async create(@Body() createCatDto: CreateCatDto) {
-    return 'This action adds a new cat';
+    return this.catsService.create(createCatDto);
+  }
+
+  @Get()
+  async findAll(): Promise<any[]> {
+    return this.catsService.findAll();
   }
 
   // @Get()
-  // async findAll(): Promise<any[]> {
-  //   return ['An array with all cats'];
+  // findAll(): Observable<any[]> {
+  //   return of(['An array with all cats']);
   // }
-
-  @Get()
-  findAll(): Observable<any[]> {
-    return of(['An array with all cats']);
-  }
 
   @Get(':id')
   findOne(@Param('id') id: string) {

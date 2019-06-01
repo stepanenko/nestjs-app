@@ -10,10 +10,23 @@ import { ItemsModule } from './items/items.module';
 
 import { MongooseModule } from '@nestjs/mongoose';
 import config from './config/keys';
+import { CatsService } from './cats/cats.service';
 
 @Module({
-  imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI)],
-  controllers: [AppController, CatsController, ItemsController],
-  providers: [AppService, ItemsService],
+  imports: [
+    ItemsModule,
+    MongooseModule
+      .forRoot(config.mongoURI, { useNewUrlParser: true }),
+  ],
+  controllers: [
+    AppController,
+    CatsController,
+    ItemsController,
+  ],
+  providers: [
+    AppService,
+    ItemsService,
+    CatsService,
+  ],
 })
 export class AppModule {}
