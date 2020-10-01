@@ -2,6 +2,8 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
+Updated all on 01.10.2020
+
 ## Official NestJS [Guide](https://docs.nestjs.com/controllers)
 
 ### Running the app:
