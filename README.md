@@ -8,9 +8,8 @@ Updated all on 01.10.2020
 
 ### Running the app:
 
-```bash
-# development
-$ npm run start
+```
+npm run start
 ```
 
 ## Introduction
