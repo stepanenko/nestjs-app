@@ -5,20 +5,15 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-import { CatsModule } from './cats/cats.module';
-// import { CatsController } from './cats/cats.controller';
-// import { CatsService } from './cats/cats.service';
-
+import { CarsModule } from './cars/cars.module';
 import { ItemsModule } from './items/items.module';
-// import { ItemsController } from './items/items.controller';
-// import { ItemsService } from './items/items.service';
 
 import config from './config/keys';
 
 @Module({
   imports: [
     ItemsModule,
-    CatsModule,
+    CarsModule,
     MongooseModule
       .forRoot(config.mongoURI, { useNewUrlParser: true }),
   ],

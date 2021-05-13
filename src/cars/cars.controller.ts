@@ -1,21 +1,21 @@
 
 import { Controller, Get, Post, Body, Query, Param, Put, Delete } from '@nestjs/common';
 import { Observable, of } from 'rxjs';
-import { CreateCatDto, UpdateCatDto } from './dto';
-import { CatsService } from './cats.service';
+import { CreateCarsDto, UpdateCarsDto } from './dto';
+import { CarsService } from './cars.service';
 
-@Controller('cats')
-export class CatsController {
-  constructor(private readonly catsService: CatsService) {}
+@Controller('cars')
+export class CarsController {
+  constructor(private readonly carsService: CarsService) {}
 
   @Post()
-  async create(@Body() createCatDto: CreateCatDto) {
-    return this.catsService.create(createCatDto);
+  async create(@Body() createCarDto: CreateCarsDto) {
+    return this.carsService.create(createCarDto);
   }
 
   @Get()
   async findAll(): Promise<any[]> {
-    return this.catsService.findAll();
+    return this.carsService.findAll();
   }
 
   // @Get()
@@ -30,7 +30,7 @@ export class CatsController {
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
+  update(@Param('id') id: string, @Body() updateCarsDto: UpdateCarsDto) {
     return `This action updates a #${id} cat`;
   }
 
