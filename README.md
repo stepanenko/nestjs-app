@@ -1,13 +1,5 @@
 
-## Official NestJS [Guide](https://docs.nestjs.com/controllers)
-
-Updated all on 13.05.2021
-
-### Running the app:
-
-```
-npm run start
-```
+# NestJS Apps
 
 ## Introduction
 Nest is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with and fully supports TypeScript (yet still enables pure JS) and combines elements of OOP, FP and FRP (Functional Reactive Programming).
