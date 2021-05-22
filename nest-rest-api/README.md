@@ -1,4 +1,3 @@
-
 # NestJS REST API
 
 A CRUD REST API using the NestJS framework and MongoDB/Mongoose.
@@ -25,5 +24,3 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
-Inspired by Brad
