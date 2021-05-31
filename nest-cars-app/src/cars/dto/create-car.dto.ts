@@ -1,6 +1,5 @@
 
-export class UpdateCarsDto {
-  readonly id: string;
+export class CreateCarDto {
   readonly name: string;
   readonly year: number;
 }
