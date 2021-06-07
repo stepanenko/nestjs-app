@@ -7,6 +7,10 @@ In order to create a basic controller, we use classes and decorators.
 Decorators associate classes with required metadata and enable Nest to create a routing map (tie requests to the corresponding controllers).
 
 ## Providers
+Many of the basic Nest classes may be treated as a provider – services, repositories, factories, helpers, and so on.
+The main idea of a provider is that it can inject dependencies; this means objects can create various relationships with each other.
+Controllers should handle HTTP requests and delegate more complex tasks to providers.
+Providers are plain JavaScript classes that are declared as providers in a module.
 
 ## Modules
 
