@@ -13,12 +13,14 @@ Controllers should handle HTTP requests and delegate more complex tasks to provi
 Providers are plain JavaScript classes that are declared as providers in a module.
 
 ## Modules
-A module is a class annotated with a @Module() decorator. The @Module() decorator provides metadata that Nest makes use of to organize the application structure.
+A module is a class annotated with a `@Module()` decorator. The `@Module()` decorator provides metadata that Nest makes use of to organize the application structure.
 Each application has at least one module, a root module. The root module is the starting point Nest uses to build the application graph - the internal data structure
 Nest uses to resolve module and provider relationships and dependencies. While very small applications may theoretically have just the root module, this is not the typical case. We want to emphasize that modules are strongly recommended as an effective way to organize your components.
 Thus, for most applications, the resulting architecture will employ multiple modules, each encapsulating a closely related set of capabilities.
 
 ## Middleware
+Middleware is a function which is called before the route handler. Middleware functions have access to the `request` and `response` objects,
+and the `next()` middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named `next`.
 
 ## Exception filters
 
