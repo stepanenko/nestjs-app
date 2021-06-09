@@ -26,9 +26,12 @@ Middleware functions can perform the following tasks:
 - make changes to the request and the response objects
 - end the request-response cycle
 - call the next middleware function in the stack
+
 If the current middleware function does not end the request-response cycle, it must call `next()` to pass control to the next middleware function. Otherwise, the request will be left hanging.
 
 ## Exception filters
+Nest comes with a built-in exceptions layer which is responsible for processing all unhandled exceptions across an application.
+When an exception is not handled by your application code, it is caught by this layer, which then automatically sends an appropriate user-friendly response.
 
 ## Pipes
 
