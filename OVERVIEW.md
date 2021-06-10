@@ -34,7 +34,7 @@ Nest comes with a built-in exceptions layer which is responsible for processing 
 When an exception is not handled by your application code, it is caught by this layer, which then automatically sends an appropriate user-friendly response.
 
 ## Pipes
-A pipe is a class annotated with the `@Injectable()` decorator. Pipes should implement the `PipeTransform` interface. 
+A pipe is a class annotated with the `@Injectable()` decorator. Pipes should implement the `PipeTransform` interface.  
 Pipes have two typical use cases:
 - transformation: transform input data to the desired form (e.g., from string to integer)
 - validation: evaluate input data and if valid, simply pass it through unchanged; otherwise, throw an exception when the data is incorrect
