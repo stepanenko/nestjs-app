@@ -41,11 +41,11 @@ Pipes have two typical use cases:
 
 ## Guards
 A guard is a class annotated with the `@Injectable()` decorator. Guards should implement the `CanActivate` interface.
-**Guards** have a single responsibility. They determine whether a given request will be handled by the route handler or not,
+Guards have a single responsibility. They determine whether a given request will be handled by the route handler or not,
 depending on certain conditions (like permissions, roles, ACLs, etc.) present at run-time. This is often referred to as authorization.
-**Guards** have access to the `ExecutionContext` instance, and thus know exactly what's going to be executed next.
+Guards have access to the `ExecutionContext` instance, and thus know exactly what's going to be executed next.
 They're designed, much like exception filters, pipes, and interceptors, to let you interpose processing logic at exactly the right point
-in the request/response cycle, and to do so declaratively. This helps keep your code DRY and declarative.
+in the request/response cycle, and to do so declaratively.
 
 ## Interceptors
 
