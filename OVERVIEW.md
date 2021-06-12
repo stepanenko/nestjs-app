@@ -58,7 +58,8 @@ Interceptors have a set of useful capabilities which are inspired by the Aspect 
 
 ## Custom decorators
 Nest is built around a language feature called decorators. Decorators are a well-known concept in a lot of commonly used programming languages,
-but in the JavaScript world, they're still relatively new. In order to better understand how decorators work, we recommend reading this article.
+but in the JavaScript world, they're still relatively new. In order to better understand how decorators work,
+we recommend reading this [article](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841).
 Here's a simple definition:
 
 > An ES2016 decorator is an expression which returns a function and can take a target, name and property descriptor as arguments.
