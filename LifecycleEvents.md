@@ -6,8 +6,10 @@ Nest provides **lifecycle hooks** that give visibility into key lifecycle events
 
 ### Lifecycle sequence
 
-The following diagram depicts the sequence of key application lifecycle events,
-from the time the application is bootstrapped until the node process exits.
-We can divide the overall lifecycle into three phases: **initializing, running and terminating**.
+We can divide the overall lifecycle into three phases: **initializing, running** and **terminating**.
 Using this lifecycle, you can plan for appropriate initialization of modules and services,
 manage active connections, and gracefully shutdown your application when it receives a termination signal.
+
+Lifecycle events happen during application bootstrapping and shutdown. Nest calls registered lifecycle hook methods on modules,
+injectables and controllers at each of the following lifecycle events (shutdown hooks need to be enabled first).
+Nest also calls the appropriate underlying methods to begin listening for connections, and to stop listening for connections.
