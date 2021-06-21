@@ -21,5 +21,5 @@ Relations are associations established between two or more tables. Relations are
 There are three types of relations:
 
 - **One-to-one** - Every row in the primary table has one and only one associated row in the foreign table. Use the `@OneToOne()` decorator to define this type of relation.
-- **One-to-many** / Many-to-one	- Every row in the primary table has one or more related rows in the foreign table. Use the `@OneToMany()` and `@ManyToOne()` decorators to define this type of relation.
+- **One-to-many / Many-to-one**	- Every row in the primary table has one or more related rows in the foreign table. Use the `@OneToMany()` and `@ManyToOne()` decorators to define this type of relation.
 - **Many-to-many** - Every row in the primary table has many related rows in the foreign table, and every record in the foreign table has many related rows in the primary table. Use the `@ManyToMany()` decorator to define this type of relation.
