@@ -35,7 +35,9 @@ When an exception is not handled by your application code, it is caught by this 
 Out of the box, this action is performed by a built-in **global exception filter**, which handles exceptions of type `HttpException` (and subclasses of it).
 When an exception is **unrecognized** (is neither `HttpException` nor a class that inherits from `HttpException`),
 the built-in exception filter generates the following default JSON response:  
-`{ "statusCode": 500, "message": "Internal server error" }`
+```
+{ "statusCode": 500, "message": "Internal server error" }
+```
 
 ## Pipes
 A pipe is a class annotated with the `@Injectable()` decorator. Pipes should implement the `PipeTransform` interface.  
