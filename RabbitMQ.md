@@ -6,6 +6,7 @@ It can be deployed in distributed and federated configurations to meet high-scal
 In addition, it's the most widely deployed message broker, used worldwide at small startups and large enterprises
 
 **Installation**
+
 ```
 npm i --save amqplib amqp-connection-manager
 ```
@@ -27,6 +28,7 @@ const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule,
 The Transport enum is imported from the @nestjs/microservices package.
 
 **Client**
+
 Like other microservice transporters, you have several options for creating a RabbitMQ ClientProxy instance.
 
 One method for creating an instance is to use the `ClientsModule`. To create a client instance with the `ClientsModule`,
