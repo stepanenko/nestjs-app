@@ -8,7 +8,7 @@ Hence, using singleton instances is fully safe for our applications.
 However, there are edge-cases when request-based lifetime may be the desired behavior, for instance per-request caching in GraphQL applications,
 request tracking, and multi-tenancy. Injection scopes provide a mechanism to obtain the desired provider lifetime behavior.
 
-**NOTE:** Using singleton scope is recommended for most use cases. Sharing providers across consumers and across requests means that an instance
+**HINT:** Using singleton scope is recommended for most use cases. Sharing providers across consumers and across requests means that an instance
 can be cached and its initialization occurs only once, during application startup.
 
 ### Usage
