@@ -7,11 +7,13 @@ Out of the box, this action is performed by a built-in global exception filter, 
 
 ## Throwing standard exceptions
 
-Nest provides a built-in `HttpException` class, exposed from the @nestjs/common package. For typical HTTP REST/GraphQL API based applications, it's best practice to send standard HTTP response objects when certain error conditions occur.
+Nest provides a built-in `HttpException` class, exposed from the `@nestjs/common` package.
+For typical HTTP REST/GraphQL API based applications, it's **best practice to send standard HTTP response objects** when certain error conditions occur.
 
 For example. Let's assume that this route handler throws an exception for some reason. To demonstrate this, we'll hard-code it as follows:
+
 ```js
-cats.controller.tsJS
+cats.controller.ts
 
 @Get()
 async findAll() {
@@ -28,9 +30,10 @@ When the client calls this endpoint, the response looks like this:
   "message": "Forbidden"
 }
 ```
-The HttpException constructor takes two required arguments which determine the response:
 
-The `response` argument defines the JSON response body. It can be a string or an object as described below.
+The `HttpException` constructor takes two required arguments which determine the response:
+
+The `response` argument defines the JSON response body. It can be a `string` or an `object` as described below.
 The `status` argument defines the HTTP status code.
 
 By default, the JSON response body contains two properties:
@@ -47,7 +50,7 @@ The second constructor argument - `status` - should be a valid HTTP status code.
 Here's an example overriding the entire response body:
 
 ```js
-cats.controller.tsJS
+cats.controller.ts
 
 @Get()
 async findAll() {
