@@ -33,13 +33,13 @@ When the client calls this endpoint, the response looks like this:
 
 The `HttpException` constructor takes two required arguments which determine the response:
 
-The `response` argument defines the JSON response body. It can be a `string` or an `object` as described below.
-The `status` argument defines the HTTP status code.
+- The `response` argument defines the JSON response body. It can be a `string` or an `object` as described below.
+- The `status` argument defines the HTTP status code.
 
 By default, the JSON response body contains two properties:
 
-`statusCode`: defaults to the HTTP status code provided in the `status` argument
-`message`: a short description of the HTTP error based on the `status`
+- `statusCode`: defaults to the HTTP status code provided in the `status` argument
+- `message`: a short description of the HTTP error based on the `status`
 
 To override just the message portion of the JSON response body, supply a string in the response argument.
 To override the entire JSON response body, pass an object in the response argument. Nest will serialize the object and return it as the JSON response body.
@@ -69,3 +69,6 @@ Using the above, this is how the response would look:
   "error": "This is a custom message"
 }
 ```
+
+## Custom exceptions
+In many cases, you will not need to write custom exceptions, and can use the built-in Nest HTTP exception.
